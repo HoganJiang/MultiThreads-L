@@ -34,7 +34,6 @@ public class T07_DelayQueue {
 
         @Override
         public long getDelay(TimeUnit unit) {
-
             return unit.convert(runningTime - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
         }
 

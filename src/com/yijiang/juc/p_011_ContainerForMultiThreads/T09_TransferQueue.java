@@ -14,19 +14,20 @@ public class T09_TransferQueue {
             }
         }).start();
 
+        new Thread(() -> {
+            try {
+                System.out.println(strs.take());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
         strs.transfer("aaa");
-//        strs.transfer("bbbb");
+        strs.transfer("bbbb");
 
-        strs.put("aaaa");
+//        strs.put("aaaa");
 
 
-		new Thread(() -> {
-			try {
-				System.out.println(strs.take());
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}).start();
 
 
     }
