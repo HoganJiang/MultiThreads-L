@@ -21,14 +21,8 @@ public class T09_TransferQueue {
                 e.printStackTrace();
             }
         }).start();
-
         strs.transfer("aaa");
         strs.transfer("bbbb");
-
 //        strs.put("aaaa");
-
-
-
-
     }
 }
